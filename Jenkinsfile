@@ -1,12 +1,7 @@
 pipeline{
-    agent none
+    agent any
     stages{
         stage('build'){
-          agent{
-            docker{
-                image 'python: node-build'
-                }
-            }
         steps{
             sh  'echo build file1.py'
             sh  'python /home/nikoscf/PycharmProjects/test_things/file1.py'
