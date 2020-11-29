@@ -13,8 +13,8 @@ pipeline{
             }
         }
         stage('test'){
-            sh -c "echo build tests.py"
-            sh -c 'python /home/nikoscf/PycharmProjects/test_things/tests/file2.py'
+            sh  "echo build tests.py"
+            sh  'python /home/nikoscf/PycharmProjects/test_things/tests/file2.py'
         }
 
           post {
