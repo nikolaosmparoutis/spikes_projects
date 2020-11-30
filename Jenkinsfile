@@ -3,11 +3,11 @@ pipeline{
    stages{
         stage('build'){
         steps{
-            sh  'echo build file1.py'
+            sh -c 'echo build file1.py'
             }
         }
         stage('test'){
-            sh  "echo build tests.py"
+            sh -c "echo build tests.py"
         }
      post {
         always {
