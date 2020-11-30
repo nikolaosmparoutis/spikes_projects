@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    stages{
+   stages{
         stage('build'){
         steps{
             sh  'echo build file1.py'
@@ -9,10 +9,10 @@ pipeline{
         stage('test'){
             sh  "echo build tests.py"
         }
-             post {
-                always {
-                  cobertura coberturaReportFile: '*/.xml'
-                }
-              }
+     post {
+        always {
+          cobertura coberturaReportFile: '*/.xml'
+        }
+      }
     }
 }
