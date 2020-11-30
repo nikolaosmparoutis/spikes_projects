@@ -1,25 +1,10 @@
 pipeline {
-agent any
-    stages {
-        stage ('Build') {
-}
+    agent any
+        stages {
+            stage ('Build') {
+                steps {
+                    echo 'Running build phase. '
+                }
+            }
         }
-   stages {
-        stage ('Test') {
-}
-        }
-   stages {
-        stage ('QA') {
-}
-        }
-   stages {
-        stage ('Deploy') {
-}
-        }
-   stages {
-        stage ('Monitor') {
-
-        }
-}
-
- }
+    }
