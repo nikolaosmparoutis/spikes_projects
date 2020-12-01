@@ -16,7 +16,7 @@ pipeline {
             }
            stage("report"){
               steps{
-                  cobertura coberturaReportFile: 'coverage.xml'
+                  cobertura coberturaReportFile: '/var/lib/jenkins/workspace/spikes_job_/coverage.xml'
                 }
            }
         }
