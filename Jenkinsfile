@@ -14,11 +14,14 @@ pipeline {
             sh  'python /tests/file2.py'
             }
         }
-
+        stage("report"){
+          steps{
           post {
                 always {
                   cobertura coberturaReportFile: '*/.xml'
                 }
               }
+            }
+
         }
     }
