@@ -4,14 +4,14 @@ pipeline {
             stage ('Build') {
                 steps {
                     echo 'Running build phase. '
-                    sh   'echo build file1.py'
+                    sh   'echo build file1'
                     sh   'python file1.py'
                 }
             }
            stage('test'){
                steps{
-                sh  "echo build tests.py"
-                sh  'python tests/file2.py'
+                sh  "echo build tests"
+                sh  'python tests/test_file1.py'
                 }
             }
            stage("report"){
