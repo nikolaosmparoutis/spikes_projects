@@ -16,11 +16,10 @@ pipeline {
             }
            stage("report"){
               steps{
-                  post {
-                        always {
+
+
                           cobertura coberturaReportFile: '*/.xml'
-                        }
-                    }
+
                 }
            }
         }
