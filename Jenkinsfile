@@ -9,19 +9,19 @@ pipeline {
                 }
             }
            stage('test'){
-           steps{
-            sh  "echo build tests.py"
-            sh  'python /tests/file2.py'
-            }
-        }
-        stage("report"){
-          steps{
-          post {
-                always {
-                  cobertura coberturaReportFile: '*/.xml'
+               steps{
+                sh  "echo build tests.py"
+                sh  'python /tests/file2.py'
                 }
-              }
             }
-
+           stage("report"){
+              steps{
+                  post {
+                        always {
+                          cobertura coberturaReportFile: '*/.xml'
+                        }
+                    }
+                }
+           }
         }
     }
