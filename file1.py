@@ -1,6 +1,6 @@
 
-def func(b):
-    if type("str") == b:
-        print(" file 1 got string")
+def func(a,b):
+    if a == b:
+        print("are equal")
         return True
     return False
