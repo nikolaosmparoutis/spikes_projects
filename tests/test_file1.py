@@ -1,11 +1,11 @@
 import unittest
-from file1 import func
+import file1 as f
 
 class MyTestCase(unittest.TestCase):
     def test_file1(self):
-        actual = func(1)
+        actual = f.func(1)
         self.assertIs(actual, False,"Are not str")
-        actual = func("asd")
+        actual = f.func("asd")
         self.assertIs(actual, True,"Are str")
 
 
