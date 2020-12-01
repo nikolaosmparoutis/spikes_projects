@@ -11,6 +11,7 @@ pipeline {
            stage('test'){
                steps{
                 sh  "echo build tests"
+                sh  'python file1.py'
                 sh  'python tests/test_file1.py'
                 }
             }
