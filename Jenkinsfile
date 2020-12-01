@@ -16,10 +16,7 @@ pipeline {
             }
            stage("report"){
               steps{
-
-
-                          cobertura coberturaReportFile: '*/.xml'
-
+                  cobertura coberturaReportFile: 'coverage.xml'
                 }
            }
         }
