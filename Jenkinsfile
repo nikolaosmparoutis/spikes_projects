@@ -9,8 +9,10 @@ pipeline {
                 }
             }
            stage('test'){
+           steps{
             sh  "echo build tests.py"
-            sh  'python /home/nikoscf/PycharmProjects/test_things/tests/file2.py'
+            sh  'python /tests/file2.py'
+            }
         }
 
           post {
