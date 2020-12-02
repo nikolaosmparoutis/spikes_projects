@@ -12,6 +12,8 @@ pipeline {
                steps{
                 sh  "echo build tests"
                 sh  'python file1.py'
+                sh  'echo $PATH'
+                sh 'echo $PYTHONPATH'
                 sh  'python test_file1.py'
                  }
                 }
