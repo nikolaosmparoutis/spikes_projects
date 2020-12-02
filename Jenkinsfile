@@ -12,11 +12,8 @@ pipeline {
                steps{
                 sh  "echo build tests"
                 sh  'python file1.py'
-                dir ("tests/"){
-                    sh  'python test_file1.py'
-                    }
-                }
-            }
+                sh  'python test_file1.py'
+                 }
            stage("report"){
               steps{
                   cobertura coberturaReportFile: '/var/lib/jenkins/workspace/spikes_job_/coverage.xml'
