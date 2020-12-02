@@ -3,7 +3,7 @@ import unittest
 # import os
 # # jenkins exposes the workspace directory through env. with this code can do import
 # sys.path.append(os.environ['WORKSPACE'])
-# import file1 as f
+import file1 as f
 
 
 class MyTestCase(unittest.TestCase):
