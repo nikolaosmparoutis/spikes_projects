@@ -13,8 +13,8 @@ pipeline {
                 sh  "echo build tests"
                 sh  'python file1.py'
                 sh  'echo $PATH'
-                sh 'echo $PYTHONPATH'
-                sh  'python test_file1.py'
+                sh   'echo $PYTHONPATH'
+                sh  'python tests/test_file1.py'
                  }
                 }
            stage("report"){
