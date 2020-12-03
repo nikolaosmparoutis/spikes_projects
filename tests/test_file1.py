@@ -1,9 +1,10 @@
 import unittest
-# import sys
-# import os
-# # jenkins exposes the workspace directory through env. with this code can do import
-# sys.path.append(os.environ['WORKSPACE'])
-
+import sys
+import os
+# jenkins exposes the workspace directory through env. with this code can do import
+sys.path.append(os.environ['WORKSPACE'])
+print("------------------------------------------")
+print("python path = ", sys.path.append(os.environ['WORKSPACE']))
 import file1 as f
 
 
