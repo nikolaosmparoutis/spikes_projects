@@ -4,7 +4,7 @@ import os
 # jenkins exposes the workspace directory through env. with this code can do import
 sys.path.append(os.environ['WORKSPACE'])
 print("------------------------------------------")
-print("python path = ", sys.path)
+print("python path = ", os.environ["PYTHONPATH"])
 import file1 as f
 
 
