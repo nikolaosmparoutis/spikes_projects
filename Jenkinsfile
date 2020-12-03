@@ -10,9 +10,7 @@ pipeline {
            stage('test'){
                steps{
                 sh  "echo build tests"
-                    ws("/var/lib/jenkins/workspace/spikes_job_/tests/"){
-                        sh  'python test_file1.py'
-                         }
+                sh  'python tests/test_file1.py'
                      }
                 }
            stage("report"){
