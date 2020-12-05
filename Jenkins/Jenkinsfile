@@ -10,7 +10,7 @@ pipeline {
            stage('Test'){
                steps{
                 sh  "echo build tests"
-                sh  "export PYTHONPATH="${PYTHONPATH}:WORKSPACE" "
+                sh  "export PYTHONPATH="${PYTHONPATH}:/var/lib/jenkins/workspaces" "
                 sh  'python tests/test_file1.py'
                      }
                 }
