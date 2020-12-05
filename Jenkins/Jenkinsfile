@@ -17,8 +17,8 @@ pipeline {
                  steps {
                     echo "Code Coverage"
                     sh     "who"
-                    sh  ''' sudo -i pip install coverage
-                            coverage run tests/test_file1.py
+                    sh  '''
+                            coverage run test_file1.py
                             coverage report
                             coverage xml -o tests/reports/coverage.xml
                         '''
