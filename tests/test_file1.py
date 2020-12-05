@@ -6,7 +6,8 @@ sys.path.append(os.environ['WORKSPACE'])
 import file1 as f
 
 class MyTestCase(unittest.TestCase):
-
+    import coverage
+    coverage.process_startup()
     def test_file1_v1(self):
         in1 = 1
         in2 = 1
