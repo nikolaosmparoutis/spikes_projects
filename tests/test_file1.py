@@ -5,8 +5,6 @@ import os
 sys.path.append(os.environ['WORKSPACE'])
 import file1 as f
 
-import coverage as cov
-
 class MyTestCase(unittest.TestCase):
 
     def test_file1_v1(self):
