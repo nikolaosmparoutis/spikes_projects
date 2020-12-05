@@ -16,7 +16,7 @@ pipeline {
            stage("Report"){
                  steps {
                     echo "Code Coverage"
-                    sh  ''' python -m tests/test_file1.py
+                    sh  ''' python tests/test_file1.py
                             coverage run tests/test_file1.py discover
                             python coverage xml -o tests/reports/coverage.xml
                         '''
