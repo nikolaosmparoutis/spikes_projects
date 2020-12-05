@@ -17,7 +17,7 @@ pipeline {
                  steps {
                     echo "Code Coverage"
                     sh  ''' python tests/test_file1.py
-                            coverage run tests/test_file1.py discover
+                            coverage run tests/test_file1.py
                             python coverage xml -o tests/reports/coverage.xml
                         '''
                         }
