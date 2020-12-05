@@ -20,7 +20,7 @@ pipeline {
                     sh  '''
                             coverage run test_file1.py
                             coverage report
-                            coverage xml -o tests/reports/coverage.xml
+                            coverage xml -o coverage.xml
                         '''
                         }
                  post{
