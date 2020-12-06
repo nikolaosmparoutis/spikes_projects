@@ -16,7 +16,6 @@ pipeline {
            stage("Report"){
                  steps {
                     echo "Code Coverage"
-                    sh     "who"
                     sh  '''
                             coverage run test_file1.py
                             coverage report
