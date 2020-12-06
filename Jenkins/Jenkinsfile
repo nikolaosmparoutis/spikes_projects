@@ -10,7 +10,7 @@ pipeline {
            stage('Test'){
                steps{
                 sh  "echo build tests"
-                sh  'python test_file1.py'
+                sh  'python tests/test_file1.py'
                      }
                 }
            stage("Report"){
