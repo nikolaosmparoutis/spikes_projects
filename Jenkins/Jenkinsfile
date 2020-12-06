@@ -17,9 +17,9 @@ pipeline {
                  steps {
                     echo "Code Coverage"
                     sh  '''
-                            coverage run test_file1.py
+                            coverage run tests/test_file1.py
                             coverage report
-                            coverage xml -o coverage.xml
+                            coverage xml -o tests/reports/coverage.xml
                         '''
                         }
                  post{
@@ -27,7 +27,7 @@ pipeline {
                     step([$class: 'CoberturaPublisher',
                                    autoUpdateHealth: false,
                                    autoUpdateStability: false,
-                                   coberturaReportFile: 'coverage.xml',
+                                   coberturaReportFile: 'tests/reports/coverage.xml',
                                    failNoReports: false,
                                    failUnhealthy: false,
                                    failUnstable: false,
