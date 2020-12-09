@@ -3,13 +3,13 @@ pipeline {
         stages {
             stage ('Build') {
                 steps {
-                    sh   'echo Running build phase. '
+                    echo 'Running build phase. '
                     sh   'python file1.py'
                 }
             }
            stage('Test'){
                steps{
-                sh  "echo build tests"
+                echo 'Run Tests'
                 sh  'python tests/test_file1.py'
                      }
                 }
@@ -17,7 +17,7 @@ pipeline {
                  steps {
                     echo "Code Coverage"
                     sh  '''
-                            coverage run tests/test_file1.py
+                            coverage run tests/test_file1.py discover
                             coverage report
                             coverage xml -o tests/reports/coverage.xml
                         '''
