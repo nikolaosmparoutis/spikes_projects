@@ -2,11 +2,16 @@ pipeline {
     agent any
         stages {
             stage ('Build') {
-                steps {
-                    echo 'Running build phase. '
-                    sh   'python file1.py'
+                agent{
+                    docker{
+                        image 'python:node-build'
+                        }
+                    }
+                    steps {
+                        echo 'Running build phase. '
+                        sh   'python file1.py'
+                    }
                 }
-            }
            stage('Test'){
                steps{
                 echo 'Run Tests'
