@@ -1,4 +1,13 @@
+import pandas as pd
 
-def meth(a=[][]):
+ls = [ ('jack', 34, 'Sydeny') ,
+             ('jack', 30, 'Delhi' ) ,
+             ('Aadi', 16, 'New York') ]
 
-    for i in enumerate(a)
+
+df = pd.DataFrame(ls, columns = ['Name' , 'Age', 'City'], index=['a', 'b', 'c'])
+
+# print(df)
+#
+print(df.groupby(['Name']))
+
